@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Anekdotes Analytics</title>
+    <script type="text/javascript" src="src/akanalytics.js"></script>
+    <script type="text/javascript">
+      function sendEvent() {
+        akanalytics.event({
+          hitType: 'event',
+          eventCategory: 'test',
+          eventAction: 'click',
+          eventLabel: 'click-test-button',
+          eventValue: 1
+        });
+      }
+      function sendPurchase() {
+        akanalytics.ecommerce.purchase({
+          'id': 'W0000001',
+          'affiliation': 'punkaid.me web store',
+          'revenue': 46.34,
+          'tax': 7.32,
+          'shipping': 6.45
+        })
+      }
+
+      akanalytics.create('UA-112034122-1', 'punkaid.me')
+        .ecommerce.create('CAD')
+        .pageview();
+    </script>
+  </head>
+  <body>
+    <h1>Anekdotes Analytics</h1>
+    <button onclick="javascript:sendEvent();">Click Test Button</button>
+    <button onclick="javascript:akanalytics.ecommerce.checkout(1);">Send Checkout 1</button>
+    <button onclick="javascript:akanalytics.ecommerce.checkout(2);">Send Checkout 2</button>
+    <button onclick="javascript:akanalytics.ecommerce.checkout(3);">Send Checkout 3</button>
+    <button onclick="javascript:sendPurchase();">Send Purchase</button>
+  </body>
+</html>

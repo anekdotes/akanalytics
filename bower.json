@@ -1,0 +1,15 @@
+{
+  "name": "akanalytics",
+  "version": "0.0.1",
+  "main": "src/akanalytics.js",
+  "ignore": [
+    "docs",
+    ".bowerrc",
+    ".gitignore",
+    "bower.json",
+    "package.json",
+    "index.html",
+    "jsdoc.json",
+    "README.md"
+  ]
+}

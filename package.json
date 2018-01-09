@@ -1,0 +1,15 @@
+{
+  "name": "akanalytics",
+  "version": "0.0.1",
+  "description": "Javascript overlay to manage analytics ECommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.json -R ./README.md --verbose"
+  },
+  "author": "Sébastien Roy",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^3.5.5"
+  }
+}
